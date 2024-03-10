@@ -1,0 +1,517 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: Montserrat, sans-serif;
+    font-weight: 700;
+}
+ul{
+    list-style: none;
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* height: 80px; */
+    padding: 2.5rem 4.5rem;
+    position:absolute;
+    width: 100%;
+    top: 0;
+    z-index:2;
+}
+
+ 
+.logo{
+    width: 132px;
+    height: 32px;
+}
+
+nav ul a{
+    padding: 0.5rem 0.5rem;
+    margin: 0 0.25rem;
+    /* color: white; */
+    font-weight: 600;
+    font-size: 14px;
+    color: white;
+}
+
+nav .icons{
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    position: relative;
+}
+
+nav .icons i{
+    position: absolute;
+    transform: translate(-50%, -50%); 
+    top: 50%;
+    left: 50%;
+}
+
+nav .icons span{
+    background-image: url(assets/hexagon-green.svg);
+    /* the above image can be achieve using clippy site clip path */
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 1.625rem;
+    display: block;
+    background-size: 1.625rem;
+    width: 1.625rem
+}
+
+
+#hero{
+ padding-top:14.5rem;
+ padding-bottom: 17.5rem;
+ background-image: url(assets/header-background.jpg);
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ color: white;
+ position: relative;
+}
+
+.section1{
+   text-align:center;
+   width:55%;
+   padding-top:6.5rem;
+   margin-left: auto;
+   margin-right: auto;
+   position: relative;
+}
+
+.section1 h1{
+    font-size:3.5rem;
+    text-transform: uppercase;
+    margin-bottom: .5rem;
+}
+
+.section1 p{
+    margin-bottom: 2rem;
+    color: #dfe5ec;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    font-size: 18px;
+}
+
+.section1 a{
+    padding: 1rem 2.25rem;
+    background-color: #14bf95;
+    color: white;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* to dark the backgound we create span tag then give class and the following prop */
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+/* -----------------SERVICE SECTION CSS--------------*/
+
+#services{
+    background-color: #fbfbfb;
+    padding: 6.25rem 4.5rem;
+}
+
+.section-heading, #projects .categories{
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.green{
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #14bf98;
+    margin-bottom: 0.5rem;
+}
+#services .section-heading h2, 
+#projects .section-heading h2,
+#contact .left .Csection-heading h2{
+    color: #484a46;
+    margin-bottom: 3.25rem;
+    font-family: Montserrat;
+}
+
+.section-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.service{
+    width: 30%;
+    background-color: white;
+    position: relative;
+}
+
+.service img{
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.service .content a{
+    position: absolute;
+    bottom: -10px;
+    left: 35%;
+    background-color:#14BF98;
+    padding: .5rem 2rem;
+    border-radius: .5rem;
+    color: white;
+}
+.service .content ul{
+    list-style-type: square;
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+}
+.service .content li{
+    padding-bottom: .5rem;
+    color: #787976;
+    font: 400 1rem/1.5625rem "Open Sans",sans-serif;
+}
+.service .content ul a{
+    color: green;
+}
+.service .content h4 span{
+    color: #14bf98;
+    font-weight: bold;
+}
+.service .content h3{
+    padding-left: 2rem;
+    font-size: 22px;
+}
+.service .content h4{
+    padding-left: 5rem;
+}
+.service .content p,
+#intro  .leftpara,
+#contact .left .leftpara p{
+        color: #787976;
+        font: 400 1rem/1.5625rem "Open Sans",sans-serif;
+}
+.service .content{
+    padding: 2rem;
+}
+.space{
+    padding-bottom: 1rem;
+}
+
+
+/*-------Project Section------ -------------------------------------*/
+
+#projects, #intro, #contact{
+    padding: 6.25rem 4.5rem;
+}
+#projects .categories{
+    width: 50%;
+    margin-bottom: 2rem;
+}
+#projects .categories a{
+    background-color: #f1f4f7;
+    color: #7b7e85;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    padding: 0.35rem 1.1rem;
+    margin: 0 0.25rem;
+    border-radius: 5px;
+}
+
+#projects .categories .active, 
+#projects .categories a:hover{
+    background-color: #14bf98;
+    color:white;
+}
+
+#projects .project{
+    width: 25%;
+    position: relative;
+    overflow: hidden;
+}
+
+#projects .project img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  transition: all 300ms;
+}
+
+#projects .project p{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    opacity: 0;
+    transition: all 300ms;
+}
+
+#projects .project:hover img, 
+#intro .container .right:hover img{
+    transform: scale(1.2);
+}
+
+#projects .project:hover p{
+    opacity: 1;
+}
+
+#projects .project:hover::after{
+    background-color: rgba(0, 0, 0, 1); 
+    opacity: 1; 
+}
+
+/*------------INTRO SECTION----------------*/
+
+#intro .container, #callme .container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+}
+
+
+#intro .container .right{
+    overflow: hidden;
+}
+
+.container .left {
+    display: flex;
+    align-items: center;
+    width:35%;
+
+}
+
+
+#intro .section-wrapper .service img{
+    width: 7rem;
+    height: 6rem;
+}
+
+/*------------------------Contact--------------*/
+
+#contact{
+    background-color: #fbfbfb;
+    display:flex;
+    justify-content: space-between;
+}
+
+#contact .left{
+    width: 45%;
+}
+
+#contact .right{
+    width: 48%;
+}
+
+#contact .left .Csection-heading h2{
+    margin-bottom: 1.5rem;
+}
+
+#contact .left .info a{
+    text-decoration: underline;
+    padding-left: 0.15rem;
+    padding-right: 0.15rem;
+    margin-left: .25rem;
+    margin-right: .25rem;
+    color: #787976;
+    margin-bottom: 1.25rem;
+}
+
+#contact .info i{
+   color: #14BF98;
+   transform: rotateY(180deg);
+}
+
+#contact .info p{
+    margin-bottom: .5rem;
+}
+
+#contact h3{
+    color: #484a46;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+#contact .icons a{
+    position: relative;
+    display: inline-block;
+    width: 3.25rem;
+    height: 3.25rem;
+}
+
+#contact .icons a span{
+    position: absolute;
+    background-image: url(assets/hexagon-green.svg);
+    background-position: center;
+    display: block;
+    width: 3.25rem;
+    height: 3.25rem;
+    background-size: 3.25rem;
+    background-repeat: no-repeat;
+}
+
+#contact .icons a i{
+    position: absolute;
+    color: white;
+    font-size: 1.5rem;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 300ms;
+}
+
+#contact .icons a:hover i{
+    color:#14bf98;
+}
+
+#contact .icons a:hover span{
+    background-color: white;
+    background-image: none;
+    transition: all 300ms;
+}
+
+#contact .right input[type=text],textarea{
+    padding-top: 1.25rem;
+    padding-bottom: 0.25rem;
+    padding-left: 1.3125rem;
+    border: 1px solid #dadada;
+    border-radius: 0.25rem;
+    background-color: white; 
+    color: #787976;
+    width: 100%;
+}
+
+#contact .right input[type=text]{
+    height: 3rem;
+}
+
+textarea{
+    height: 8rem;
+}
+
+#contact .right .form-group{
+    margin-bottom: 1.25rem;
+    position: relative;
+}
+
+#contact .right label{
+    position: absolute;
+    left: 1.375rem;
+    top: 0.8125rem;
+    color: #787976;
+    font-size: 0.87rem;
+    transition: all 300ms;
+}
+
+#contact .right input[type=text]:focus + label,
+#contact .right textarea:focus + label{
+    font-size:0.7rem;
+    top: 0.5rem;
+}
+
+#contact .right .agree,#contact a{
+    font-size: 0.875rem;
+    color: #787976;
+}
+
+#contact .right .agree a{
+    text-decoration: underline;
+}
+
+#contact .right button{
+    width: 100%;
+    background-color: #14bf98;
+    color: white;
+    border: 2px solid #14bf98;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    padding:0.75rem;
+    transition: all 300rem;
+    cursor: pointer;
+}
+
+#contact .right button:hover{
+    background-color: white;
+    color: #14bf98;
+}
+
+/*-----footer--------*/
+
+footer{
+    background-color: #113448;
+    padding-top: 5rem;
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
+    font-size: 14px;
+}
+
+footer, footer a{
+    color: #fff;
+}
+
+footer .bottom{
+    text-align:center;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+}
+
+footer .top{
+    display: flex;
+    justify-content: space-between;
+}
+footer .top h4{
+    margin-bottom: 1rem;
+    font-size:large;
+}
+footer .left{
+    width: 40%;
+}
+
+footer .left p{
+    line-height: 1.5;
+}
+
+footer .right{
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+}
+
+footer .top .right a{
+    text-decoration: underline;
+    margin-bottom: .5rem;
+}
+
+footer .top ul{
+    display:inline;
+}
