@@ -147,7 +147,8 @@ nav .icons span{
 }
 #services .section-heading h2, 
 #projects .section-heading h2,
-#contact .left .Csection-heading h2{
+#contact .left .Csection-heading h2,
+#callme .left h2{
     color: #484a46;
     margin-bottom: 3.25rem;
     font-family: Montserrat;
@@ -208,7 +209,8 @@ nav .icons span{
 }
 .service .content p,
 #intro  .leftpara,
-#contact .left .leftpara p{
+#contact .left .leftpara p,
+#callme .left .leftpara{
         color: #787976;
         font: 400 1rem/1.5625rem "Open Sans",sans-serif;
 }
@@ -222,7 +224,7 @@ nav .icons span{
 
 /*-------Project Section------ -------------------------------------*/
 
-#projects, #intro, #contact{
+#projects, #intro, #contact, #callme{
     padding: 6.25rem 4.5rem;
 }
 #projects .categories{
@@ -302,7 +304,7 @@ nav .icons span{
     overflow: hidden;
 }
 
-.container .left {
+#intro .container .left{
     display: flex;
     align-items: center;
     width:35%;
@@ -323,11 +325,11 @@ nav .icons span{
     justify-content: space-between;
 }
 
-#contact .left{
+#contact .left, #callme .left{
     width: 45%;
 }
 
-#contact .right{
+#contact .right, #callme .right{
     width: 48%;
 }
 
@@ -398,7 +400,8 @@ nav .icons span{
     transition: all 300ms;
 }
 
-#contact .right input[type=text],textarea{
+#contact .right input[type=text],textarea, 
+#callme .right input[type=text]{
     padding-top: 1.25rem;
     padding-bottom: 0.25rem;
     padding-left: 1.3125rem;
@@ -409,7 +412,8 @@ nav .icons span{
     width: 100%;
 }
 
-#contact .right input[type=text]{
+#contact .right input[type=text],
+#callme .right input[type=text]{
     height: 3rem;
 }
 
@@ -417,12 +421,15 @@ textarea{
     height: 8rem;
 }
 
-#contact .right .form-group{
+#contact .right .form-group,
+#callme .right .form-group{
     margin-bottom: 1.25rem;
     position: relative;
 }
 
-#contact .right label{
+
+#contact .right label,
+#callme .right label{
     position: absolute;
     left: 1.375rem;
     top: 0.8125rem;
@@ -431,22 +438,28 @@ textarea{
     transition: all 300ms;
 }
 
+#callme .right label{ color: #dfe5ec; }
+
 #contact .right input[type=text]:focus + label,
-#contact .right textarea:focus + label{
+#contact .right textarea:focus + label,
+#callme .right input[type=text]:focus + label{
     font-size:0.7rem;
     top: 0.5rem;
 }
 
-#contact .right .agree,#contact a{
+#contact .right .agree,#contact a,
+#callme .right .agree{
     font-size: 0.875rem;
     color: #787976;
 }
 
-#contact .right .agree a{
+#contact .right .agree a,
+#callme .right .agree a{
     text-decoration: underline;
 }
 
-#contact .right button{
+#contact .right button,
+#callme .right button{
     width: 100%;
     background-color: #14bf98;
     color: white;
@@ -460,7 +473,8 @@ textarea{
     cursor: pointer;
 }
 
-#contact .right button:hover{
+#contact .right button:hover,
+#callme .right button:hover{
     background-color: white;
     color: #14bf98;
 }
@@ -514,4 +528,54 @@ footer .top .right a{
 
 footer .top ul{
     display:inline;
+}
+
+
+/*----------callme----------*/
+
+#callme{
+    background-color: #153E52;
+}
+
+#callme .leftpara p, #callme ul, #callme a, #callme input{
+    color: #dfe5ec;
+}
+
+#callme .left .leftpara ul{
+    display: contents;
+}
+
+#callme .left h2{
+    margin-bottom: 1rem;
+    color:white;
+}
+
+#callme .right input{
+    background-color: #2A5D77;
+   
+}
+
+#callme .right .form-group input, #callme textarea{ 
+    background-color: #2A5D77; 
+    border-color: #2A5D77;
+}
+
+#callme .right button:hover{
+    background-color: #2A5D77; 
+}
+
+#callme .right .agree{
+    color: #dfe5ec;
+}
+
+#callme .right select{
+    width:100%;
+    height: 3rem;
+    background-color: #2A5D77;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: #dfe5ec;
+    border: none;
+    margin-bottom: 1.25rem;
+    border-radius: 5px;
 }
